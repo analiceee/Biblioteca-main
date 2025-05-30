@@ -62,13 +62,10 @@
                     <td>{{ livros.nome }}</td>
                     <td>{{ livros.autor }}</td>
                     <td>{{ livros.editora }}</td>
-                    <td>
-                        {% for genero in livros.genero.all %}
-                        {{ genero.nome }}{% if not forloop.last %}, {% endif %}
-                        {% endfor %}
+                    <td>{{ livros.genero}}
                     </td>
                     <td>{{ livros.preco }}</td>
-                    <td>{{ livros.data_plub }}</td>
+                    <td>{{ livros.data_pub }}</td>
                     <td>{{ livros.status }}</td>
                     <td><a href="editar/{{ livros.id }}" class="btn btn-warning">Editar</a></td>
                     <td><a href="delete/{{ livros.id }}" class="btn btn-danger">Excluir</a></td>

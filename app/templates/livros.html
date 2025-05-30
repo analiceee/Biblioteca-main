@@ -53,10 +53,7 @@
                     <td>{{ livro.nome }}</td>
                     <td>{{ livro.autor }}</td>
                     <td>{{ livro.editora }}</td>
-                    <td>
-                        {% for genero in livro.genero.all %}
-                            {{ genero.nome }}{% if not forloop.last %}, {% endif %}
-                        {% endfor %}
+                    <td>{{livro.genero}}
                     </td>
                     <td>R$ {{ livro.preco }}</td>
                     <td>{{ livro.data_pub }}</td> <!-- Corrija se o campo tiver outro nome no modelo -->

@@ -4,10 +4,10 @@ from django.views import View
 from django.contrib import messages
 
 class IndexView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'index.html')
-    def post(self, request):
-        pass
+    def get(self, request, *args, **kwargs): 
+        livros = Livro.objects.all()
+        return render(request, 'index.html', {'livros': livros})
+
 
 class LivrosView(View):
     def get(self, request, *args, **kwargs):
